@@ -46,7 +46,7 @@ int lastPosition(int marks[], int n, int target)
         if (marks[mid] == target)
         {
             answer = mid;
-            low= mid+1;
+            low=mid+1;
         }
         else if (marks[mid] < target)
         {
