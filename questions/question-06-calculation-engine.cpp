@@ -53,7 +53,7 @@ public:
 template <class T>
 T maximum(T a, T b)
 {
-    if (a < b)
+    if (a > b)
         return a;
 
     return b;
@@ -66,8 +66,8 @@ int main()
     services[0] = new StudentService();
     services[1] = new EmployeeService();
 
-    double amount = 1000;
-    double rate = 10;
+    double amount = 2000;
+    double rate = 15;
 
     try
     {
@@ -94,7 +94,7 @@ int main()
                     employeeAmount)
              << endl;
     }
-    catch (runtime_error e)
+    catch (const exception &e)
     {
         cout << "Runtime error: "
              << e.what() << endl;
