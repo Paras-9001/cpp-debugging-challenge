@@ -22,6 +22,7 @@ public:
             throw invalid_argument(
                 "Amount cannot be negative");
     }
+    virtual ~Service()= default;
 };
 
 class StudentService : public Service
@@ -67,7 +68,7 @@ int main()
     services[1] = new EmployeeService();
 
     double amount = 2000;
-    double rate = 15;
+    double rate = 1;
 
     try
     {
